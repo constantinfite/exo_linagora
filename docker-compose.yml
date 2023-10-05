@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  # Apache James Server
+  james:
+    image: apache/james
+    container_name: apache-james
+    ports:
+      - "25:25"   # SMTP port
+      - "8081:8081"   # HTTP Web Admin Console
+      - "110:110" # POP3 port
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./james-data:/var/data
+    environment:
+      - JAMES_ROOT_DIRECTORY=/var/data
+    networks:
+      - my-network
+
+  # Vue.js Frontend
+  vue-frontend:
+    image: vue-todo-app
+    container_name: vue-frontend
+    ports:
+      - "8080:8080" # Map Vue.js app to port 8080
+    networks:
+      - my-network
+
+networks:
+  my-network:
