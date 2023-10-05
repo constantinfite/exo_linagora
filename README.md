@@ -18,7 +18,7 @@ Port : http://localhost:8080
 ### Add user
 
 Only one domain is present at the beginning, it is localhost
-So to add a new user it must follow this [rule]. (https://james.apache.org/server/config-users.html)
+So to add a new user it must follow this [rule](https://james.apache.org/server/config-users.html)
 
 ## Backend 
 
@@ -32,7 +32,7 @@ curl http://localhost:8000/domains
 
 ### Add new features 
 
-Follow this [page] (https://james.apache.org/server/manage-webadmin.html#Create_a_user)
+Follow this [page](https://james.apache.org/server/manage-webadmin.html#Create_a_user)
 
 
 
